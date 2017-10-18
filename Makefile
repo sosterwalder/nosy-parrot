@@ -12,7 +12,7 @@ gh-pages:
 	git checkout master docs Makefile
 	git reset HEAD
 	cd docs/ && make html
-	mv -fv docs/html/* ./
+	mv -fv html/* ../
 	rm -rf docs Makefile
 	git add -A
-	git ci -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
+	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
