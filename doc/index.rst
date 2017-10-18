@@ -7,6 +7,8 @@
 Nosy parrot - Surveys for the curious
 =====================================
 
+.. image:: favicon.ico
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
