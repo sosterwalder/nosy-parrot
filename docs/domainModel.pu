@@ -1,0 +1,19 @@
+@startuml
+hide empty members
+
+class Survey
+class Question
+class Response
+class Answer
+class User
+class Guest
+
+Survey "1" -- "1..*" Question
+Question "1" -- "0..*" Response
+Question "1" -- "0..*" Answer
+Response "1..*" - "1..*" Answer
+Survey "0..*" -- "1" User
+Question "0..*" - "1" User
+Answer "0..*" -- "1" Guest
+
+@enduml
