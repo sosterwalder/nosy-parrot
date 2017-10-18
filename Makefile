@@ -1,6 +1,7 @@
 .PHONY: doc doc-watch gh-pages test
 
 doc:
+	cd docs/ && plantuml.exe source/.
 	cd docs/ && make html
 
 doc-watch:
