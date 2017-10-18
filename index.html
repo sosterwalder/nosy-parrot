@@ -1,1 +1,733 @@
-First commit
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Nosy parrot - Surveys for the curious &mdash; Nosy Parrot 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Nosy Parrot 0.1 documentation" href="#"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="#" class="icon icon-home"> Nosy Parrot
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Nosy parrot - Surveys for the curious</a><ul>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li><a class="reference internal" href="#project-vision">Project vision</a></li>
+<li><a class="reference internal" href="#actors">Actors</a></li>
+<li><a class="reference internal" href="#use-cases">Use Cases</a><ul>
+<li><a class="reference internal" href="#use-case-uc1-create-surveys">Use Case UC1: Create surveys</a></li>
+<li><a class="reference internal" href="#use-case-uc2-edit-surveys">Use Case UC2: Edit surveys</a></li>
+<li><a class="reference internal" href="#use-case-uc3-delete-surveys">Use Case UC3: Delete surveys</a></li>
+<li><a class="reference internal" href="#use-case-uc4-take-surveys">Use Case UC4: Take surveys</a></li>
+<li><a class="reference internal" href="#use-case-uc5-evaluate-surveys">Use Case UC5: Evaluate surveys</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#additional-requirements">Additional requirements</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#domain-model">Domain model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Nosy Parrot</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Nosy parrot - Surveys for the curious</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nosy-parrot-surveys-for-the-curious">
+<h1>Nosy parrot - Surveys for the curious<a class="headerlink" href="#nosy-parrot-surveys-for-the-curious" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/favicon.ico" src="_images/favicon.ico" />
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+<div class="section" id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h3>
+<p>Parrots tend to be nosy (curious). Nosy parrot is a survey system
+which enables users to create surveys and let other users complete surveys while
+being user friendly.</p>
+</div>
+<div class="section" id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="project-vision">
+<h4>Project vision<a class="headerlink" href="#project-vision" title="Permalink to this headline">¶</a></h4>
+<p>Nosy parrot provides users with an easy way to create and use surveys.
+Each survey contains one or more questions which can be answered. Questions
+can come in different types such as open questions, ratings or closed
+questions.</p>
+<p>Nosy parrot is valuable due to its modularity and simplicity. The modularity
+allows to create any kind of surveys which allows nosy parrot to be used in
+any sector (e.g. the academic or health sector).</p>
+<p>Nosy parrot will be deployed in multiple stages with increasing measures of
+success at each stage.</p>
+<p>In the first stage, nosy parrot will be deployed as an internal
+proof-of-concept and be used to rate internal events. It is successful if the
+response of the users is positive.</p>
+<p>In the second stage, nosy parrot will be made available for free use as a
+beta version. It is successful if at least 1000 users use it on a regular
+basis for real-world surveys within six months.</p>
+</div>
+<div class="section" id="actors">
+<h4>Actors<a class="headerlink" href="#actors" title="Permalink to this headline">¶</a></h4>
+<p>From the above described vision the following actors are derived.</p>
+<ul>
+<li><p class="first">Guests</p>
+<p>As the name indicates, guests are simple visitors of the page, that are not (yet)
+registered. Guests may access publicly available surveys or surveys they have
+got a link to.</p>
+</li>
+<li><p class="first">Users</p>
+<p>Guests that register themselves are users. Users manage their surveys (they
+create, edit and delete surveys). Users can also complete surveys.</p>
+<p>Users can share surveys. A survey can either be made public, then it is
+available to everyone including guests, or it can be shared with specific
+other users. This is done by generating a link per survey which makes
+the survey available to everyone in possession of this link.</p>
+</li>
+<li><p class="first">Administrators</p>
+<p>TBD.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="use-cases">
+<h4>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h4>
+<p>To ensure that the project’s vision is reached, use cases are
+defined. The use cases define the requirements of the project in form of text
+stories.</p>
+<div class="section" id="use-case-uc1-create-surveys">
+<h5>Use Case UC1: Create surveys<a class="headerlink" href="#use-case-uc1-create-surveys" title="Permalink to this headline">¶</a></h5>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Scope:</th><td class="field-body"><p class="first">Nosy parrot frontend and backend</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Level:</th><td class="field-body"><p class="first">User goal</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Primary actor:</th><td class="field-body"><p class="first">User</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Stakeholders and interests:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>Guest: Likes to give feedback or information about a certain field.</li>
+<li>User: Likes to have information of guests or other users about a certain field.</li>
+<li>Administrator: -</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Preconditions:</th><td class="field-body"><p class="first">The user is authenticated.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Post conditions:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">The survey is saved.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Main success scenario:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ol class="first arabic simple">
+<li>The user navigates to the page holding his surveys.</li>
+<li>The user chooses the button to add a new survey.</li>
+<li>The user inserts a title for the survey.</li>
+<li>The user builds the survey defining at least one question using the
+predefined elements to build questions.</li>
+<li>The user saves the survey.</li>
+<li>The survey appears in the list of the user’s surveys.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Extensions:</th><td class="field-body"><dl class="first docutils">
+<dt>a Cancelation of the creation of the survey.</dt>
+<dd><ol class="first last arabic simple">
+<li>When the user is building the survey he clicks on the cancel
+button at the bottom of the mask.</li>
+<li>The survey is cancelled and not saved.</li>
+</ol>
+</dd>
+<dt>b The database system is not available.</dt>
+<dd><ol class="first last arabic simple">
+<li>When the user has finished building the survey the database system
+is not available anymore.</li>
+<li>A corresponding error message is shown, which asks the user to try
+saving the survey at a later time.</li>
+<li>The user tries to save the survey at a later time.</li>
+</ol>
+</dd>
+<dt>c Incomplete details.</dt>
+<dd><ol class="first last arabic simple">
+<li>The user does not fill in required details when creating a survey.</li>
+<li>A corresponding error message is shown, required fields are being
+marked as erroneous.</li>
+<li>The user fills out the required details and is then able to create
+the survey.</li>
+</ol>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Special requirements:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Technology and data variations list:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Frequency of occurrence:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Could be nearly continous.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Open issues:</th><td class="field-body"><p class="first last">None.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="use-case-uc2-edit-surveys">
+<h5>Use Case UC2: Edit surveys<a class="headerlink" href="#use-case-uc2-edit-surveys" title="Permalink to this headline">¶</a></h5>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Scope:</th><td class="field-body"><p class="first">Nosy parrot frontend and backend</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Level:</th><td class="field-body"><p class="first">User goal</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Primary actor:</th><td class="field-body"><p class="first">User</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Stakeholders and interests:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>Guest: Likes to give feedback or information about a certain field.</li>
+<li>User: Likes to have information of guests or other users about a certain field.</li>
+<li>Administrator: -</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Preconditions:</th><td class="field-body"><p class="first">The user is authenticated and has at least one valid, saved
+survey.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Post conditions:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">The survey is saved, the changes are adopted.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Main success scenario:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ol class="first arabic simple">
+<li>The user navigates to the page holding his surveys.</li>
+<li>The user chooses a survey he wants to edit.</li>
+<li>The user makes the changes he wants.</li>
+<li>The user saves the survey.</li>
+<li>The survey appears in the list of the user’s surveys and the changes
+are adopted.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Extensions:</th><td class="field-body"><dl class="first docutils">
+<dt>a Cancelation of the editing of the survey.</dt>
+<dd><ol class="first last arabic simple">
+<li>When the user is editing the survey he clicks on the cancel
+button at the bottom of the mask.</li>
+<li>The made changes are not saved.</li>
+</ol>
+</dd>
+<dt>b The database system is not available.</dt>
+<dd><ol class="first last arabic simple">
+<li>When the user has finished editing the survey the database system
+is not available anymore.</li>
+<li>A corresponding error message is shown, which asks the user to try
+saving the survey at a later time.</li>
+<li>The user tries to save the survey at a later time.</li>
+</ol>
+</dd>
+<dt>c Incomplete details.</dt>
+<dd><ol class="first last arabic simple">
+<li>The user does not fill in required details when editing a survey.</li>
+<li>A corresponding error message is shown, required fields are being
+marked as erroneous.</li>
+<li>The user fills out the required details and is then able to create
+the survey.</li>
+</ol>
+</dd>
+<dt>d Foreign survey.</dt>
+<dd><ol class="first last arabic simple">
+<li>The user tries to access a foreign survey.</li>
+<li>A corresponding error message is shown.</li>
+<li>The user is redirected to his list of surveys.</li>
+</ol>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Special requirements:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Technology and data variations list:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Frequency of occurrence:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Could be nearly continous.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Open issues:</th><td class="field-body"><p class="first last">None.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="use-case-uc3-delete-surveys">
+<h5>Use Case UC3: Delete surveys<a class="headerlink" href="#use-case-uc3-delete-surveys" title="Permalink to this headline">¶</a></h5>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Scope:</th><td class="field-body"><p class="first">Nosy parrot frontend and backend</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Level:</th><td class="field-body"><p class="first">User goal</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Primary actor:</th><td class="field-body"><p class="first">User</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Stakeholders and interests:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>Guest: Likes to fill out only relevant surveys.</li>
+<li>User: Likes to remove obsolete surveys.</li>
+<li>Administrator: None.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Preconditions:</th><td class="field-body"><p class="first">The user is authenticated and has at least one valid, saved
+survey.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Post conditions:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">The survey is deleted.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Main success scenario:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ol class="first arabic simple">
+<li>The user navigates to the page holding his surveys.</li>
+<li>The user deletes a survey.</li>
+<li>The survey disappears from the list of the user’s surveys.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Extensions:</th><td class="field-body"><dl class="first docutils">
+<dt>b The database system is not available.</dt>
+<dd><ol class="first last arabic simple">
+<li>When the user has chosen to delete the survey the database system
+is not available anymore.</li>
+<li>A corresponding error message is shown, which asks the user to try
+saving the survey at a later time.</li>
+<li>The user tries to delete the survey at a later time.</li>
+</ol>
+</dd>
+<dt>d Foreign survey.</dt>
+<dd><ol class="first last arabic simple">
+<li>The user tries to delete a foreign survey.</li>
+<li>A corresponding error message is shown above the list of the
+user’s surveys.</li>
+</ol>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Special requirements:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Technology and data variations list:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Frequency of occurrence:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Could be nearly continous.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Open issues:</th><td class="field-body"><p class="first last">None.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="use-case-uc4-take-surveys">
+<h5>Use Case UC4: Take surveys<a class="headerlink" href="#use-case-uc4-take-surveys" title="Permalink to this headline">¶</a></h5>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Scope:</th><td class="field-body"><p class="first">Nosy parrot frontend and backend</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Level:</th><td class="field-body"><p class="first">User goal</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Primary actor:</th><td class="field-body"><p class="first">Guests</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Stakeholders and interests:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>Guest: Likes to give feedback or information about a certain field.</li>
+<li>User: Likes to have information of guests or other users about a certain field.</li>
+<li>Administrator: -</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Preconditions:</th><td class="field-body"><p class="first">There exist public surveys or the guest has received a link
+to a specific, non-public survey.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Post conditions:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">The answers to the survey are saved, the guest is
+identified by his IP address.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Main success scenario:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><ol class="first arabic simple">
+<li>The guest opens a survey identified by an URL.</li>
+<li>The guest fills out the details of the survey.</li>
+<li>The guest saves his answers.</li>
+<li>The guest gets a message that his answers were saved.</li>
+<li>The creator of the survey (a user) gets notified about the answers.</li>
+</ol>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Extensions:</th><td class="field-body"><dl class="first docutils">
+<dt>a Cancelation of the answering of the survey.</dt>
+<dd><ol class="first last arabic simple">
+<li>When the guest is answering the survey he closes the survey.</li>
+<li>The given answers are not saved.</li>
+</ol>
+</dd>
+<dt>b The database system is not available.</dt>
+<dd><ol class="first last arabic simple">
+<li>When the guest has finished answering the survey the database system
+is not available anymore.</li>
+<li>A corresponding error message is shown, which asks the guest to try
+saving the survey at a later time.</li>
+<li>The guest tries to save the survey at a later time.</li>
+</ol>
+</dd>
+<dt>c Incomplete details.</dt>
+<dd><ol class="first last arabic simple">
+<li>The guest does not fill in answers to required questions when
+taking the survey.</li>
+<li>A corresponding error message is shown, required fields are being
+marked as erroneous.</li>
+<li>The guest fills out the required details and is then able to save
+his answers.</li>
+</ol>
+</dd>
+<dt>d Non-public survey without generated link.</dt>
+<dd><ol class="first last arabic simple">
+<li>The guest tries to access a survey which is not public and whose
+owner has not created a link to share the survey.</li>
+<li>A corresponding error message is shown.</li>
+</ol>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Special requirements:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Technology and data variations list:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">None</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Frequency of occurrence:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Could be nearly continous.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Open issues:</th><td class="field-body"><p class="first last">None.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="use-case-uc5-evaluate-surveys">
+<h5>Use Case UC5: Evaluate surveys<a class="headerlink" href="#use-case-uc5-evaluate-surveys" title="Permalink to this headline">¶</a></h5>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Scope:</th><td class="field-body"><p class="first">Nosy parrot frontend and backend</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Level:</th><td class="field-body"><p class="first">User goal</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Primary actor:</th><td class="field-body"><p class="first">Users</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Stakeholders and interests:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><ul class="first simple">
+<li>Guest: -</li>
+<li>User: Likes to have information of guests or other users about a certain field.</li>
+<li>Administrator: -</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Preconditions:</th><td class="field-body"><p class="first">TBD</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Post conditions:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">TBD</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Main success scenario:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">TBD</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Extensions:</th><td class="field-body"><p class="first">TBD</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Special requirements:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">TBD</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Technology and data variations list:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">TBD</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Frequency of occurrence:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">Could be nearly continous.</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Open issues:</th><td class="field-body"><p class="first last">None.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="additional-requirements">
+<h4>Additional requirements<a class="headerlink" href="#additional-requirements" title="Permalink to this headline">¶</a></h4>
+<p>TBD.</p>
+</div>
+</div>
+<div class="section" id="domain-model">
+<h3>Domain model<a class="headerlink" href="#domain-model" title="Permalink to this headline">¶</a></h3>
+<p>The domain model shows the essential concepts and objects of the domain.</p>
+<img alt="domainModel.png" src="domainModel.png" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Sven Osterwalder.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
