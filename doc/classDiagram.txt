@@ -1,0 +1,22 @@
+@startuml
+
+class Survey
+
+class Question
+Question <|-- ChoiceQuestion
+Question <|-- OpenQuestion
+
+ChoiceQuestion <|-- SingleChoice
+SingleChoice <|-- Boolean
+SingleChoice <|-- Rating
+ChoiceQuestion <|-- MultipleChoice
+
+class Response
+Response <|-- ChoiceSet
+Response <|-- ResponseChoice
+Response <|-- AnswerText
+
+Survey "1" - "1..n" Question : contains
+Question "1..n" - "0..n" Response : contains
+
+@enduml
