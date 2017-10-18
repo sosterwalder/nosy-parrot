@@ -8,10 +8,10 @@ doc-watch:
 
 gh-pages:
 	git checkout gh-pages
-	rm -rf build _sources _static
+	rm -rf docs/build
 	git checkout master docs Makefile
 	git reset HEAD
-	make -C docs/ html
+	cd docs/ && make html
 	mv -fv docs/html/* ./
 	rm -rf docs Makefile
 	git add -A
