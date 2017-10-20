@@ -115,6 +115,7 @@ stories.
 +--------------------+
 
 .. _uc1:
+
 Use Case UC1: Create surveys
 ----------------------------
 
@@ -192,8 +193,7 @@ Use Case UC2: Edit surveys
     1. The user chooses a survey he wants to edit.
     3. The user makes the changes he wants.
     4. The user saves the survey.
-    5. The survey appears in the list of the user's surveys and the changes
-       are adopted.
+    5. The survey appears in the list of the user's surveys and the changes are adopted.
 
 :Extensions:
     a Cancellation of the editing of the survey.
