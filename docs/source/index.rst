@@ -100,6 +100,24 @@ stories.
 
 .. TODO: Provide overview of use cases?
 
++--------------------+
+| Use cases overview |
++====================+
+| :ref:`uc1`         |
++--------------------+
+| :ref:`uc2`         |
++--------------------+
+| :ref:`uc3`         |
++--------------------+
+| :ref:`uc4`         |
++--------------------+
+| :ref:`uc5`         |
++--------------------+
+| :ref:`uc6`         |
++--------------------+
+
+.. _uc1:
+
 Use Case UC1: Create surveys
 ----------------------------
 
@@ -149,9 +167,11 @@ Use Case UC1: Create surveys
 
 :Technology and data variations list: None
 
-:Frequency of occurrence: Could be nearly continous.
+:Frequency of occurrence: Could be nearly continuous.
 
 :Open issues: None.
+
+.. _uc2:
 
 Use Case UC2: Edit surveys
 ----------------------------
@@ -210,6 +230,8 @@ Use Case UC2: Edit surveys
 
 :Open issues: None.
 
+.. _uc3:
+
 Use Case UC3: Delete surveys
 ----------------------------
 
@@ -253,6 +275,8 @@ Use Case UC3: Delete surveys
 :Frequency of occurrence: Could be nearly continous.
 
 :Open issues: None.
+
+.. _uc4:
 
 Use Case UC4: Take surveys
 --------------------------
@@ -311,6 +335,8 @@ Use Case UC4: Take surveys
 
 :Open issues: None.
 
+.. _uc5:
+
 Use Case UC5: Evaluate surveys
 ------------------------------
 
@@ -332,6 +358,61 @@ Use Case UC5: Evaluate surveys
 :Main success scenario: TBD
 
 :Extensions: TBD
+
+:Special requirements: TBD
+
+:Technology and data variations list: TBD
+
+:Frequency of occurrence: Could be nearly continous.
+
+:Open issues: None.
+
+.. _uc6:
+
+Use Case UC6: Register as user
+------------------------------
+
+:Scope: Nosy parrot frontend and backend
+
+:Level: User goal
+
+:Primary actor: Guests
+
+:Stakeholders and interests:
+    * Guest: Would like to be able to create and evaluate surveys.
+    * User: -
+    * Administrator: -
+
+:Preconditions: There is no user registered with the exact same details as
+                the guest.
+
+:Post conditions: The guest is registered as a user and is able to
+                  authenticate himself as such.
+
+:Main success scenario:
+    1. The guest opens the main page.
+    2. The guest navigates to the registration form.
+    3. The guest fills out the registration form.
+    4. The guest gets a message that he is registered.
+    5. The guest receives an email message about the successful registration.
+
+:Extensions:
+    a Cancellation of the registration.
+        1. While the guest is registering himself he closes the page.
+        2. The guest is not registered as a user.
+    b The database system is not available.
+        1. When the guest has finished registering the database system
+           is not available anymore.
+        2. A corresponding error message is shown, which asks the guest to try
+           registering himself at a later time.
+        3. The guest tries to submit the registration form at a later time.
+    c Incomplete details.
+        1. The guest does not fill in all required details when registering
+           himself as a user.
+        2. A corresponding error message is shown, required fields are being
+           marked as erroneous.
+        3. The guest fills out the required details and is then able to
+           register himself as a user.
 
 :Special requirements: TBD
 
