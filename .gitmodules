@@ -1,0 +1,3 @@
+[submodule "nosy-parrot-backend"]
+	path = nosy-parrot-backend
+	url = git@github.com:sosterwalder/nosy-parrot-backend.git
